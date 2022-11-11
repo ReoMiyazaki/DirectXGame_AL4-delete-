@@ -403,7 +403,7 @@ void Object3d::CreateModel()
 	// ファイルストリーム
 	std::ifstream file;
 	// .objファイルを開く
-	file.open("Resources/triangle/triangle.obj");
+	file.open("Resources/triangle_tex/triangle_tex.obj");
 	// ファイルオープン失敗をチェック
 	assert(!file.fail());
 
@@ -432,9 +432,9 @@ void Object3d::CreateModel()
 			// 座標データに追加
 			positions.emplace_back(position);
 			// 頂点データに追加
-			VertexPosNormalUv vertex{};
-			vertex.pos = position;
-			vertices.emplace_back(vertex);
+		//	VertexPosNormalUv vertex{};
+		//	vertex.pos = position;
+		//	vertices.emplace_back(vertex);
 		}
 		// 先頭文字がfならポリゴン(三角形)
 		if (key == "f")
@@ -544,7 +544,7 @@ void Object3d::CreateModel()
 		//	}
 	}
 
-	// 頂点インデックスの設定
+	// 頂点インデックスの設定　
 	{
 		//	for (int i = 0; i < _countof(indices); i++)
 		//	{
